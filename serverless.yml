@@ -25,16 +25,12 @@ functions:
           method: get
 
 custom:
-  webpack:
-    webpackConfig: 'webpack.config.js'
-    packager: 'yarn'
-    # includeModules: true
-  # bundle:
-  #   forceExclude:
-  #     - "_http_common"
-  #   copyFiles:
-  #     - from: 'node_modules/.prisma/client/query-engine-rhel-openssl-1.0.x'
-  #       to: 'node_modules/.prisma/client/query-engine-rhel-openssl-1.0.x'
-  #     - from: 'node_modules/.prisma/client/schema.prisma'
-  #       to: 'node_modules/.prisma/client/schema.prisma'
-  #   packager: yarn
+  bundle:
+    forceExclude:
+      - "_http_common"
+    copyFiles:
+      - from: 'node_modules/.prisma/client/query-engine-rhel-openssl-1.0.x'
+        to: 'node_modules/.prisma/client/query-engine-rhel-openssl-1.0.x'
+      - from: 'node_modules/.prisma/client/schema.prisma'
+        to: 'node_modules/.prisma/client/schema.prisma'
+    packager: yarn
